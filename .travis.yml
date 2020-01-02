@@ -1,0 +1,11 @@
+services:
+  - docker
+
+addons:
+  apt:
+    packages:
+      - docker-ce
+
+script:
+  - docker build --build-arg CPU_CORE=2 . -t ffmpeg
+  - docker run --rm ffmpeg /opt/build/FFmpeg/ffmpeg -encoders
