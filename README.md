@@ -11,18 +11,18 @@ $ docker build --build-arg CPU_CORE=<NUMBER_OF_CPU_CORES> . -t ffmpeg
 ## Appendix
 ```
 # ldd /opt/build/FFmpeg/ffmpeg
-	/lib/ld-musl-x86_64.so.1 (0x7f54cbc12000)
+  	/lib/ld-musl-x86_64.so.1 (0x7f90e0d08000)
 ```
 
 ```
 # du -h /opt/build/FFmpeg/{ffmpeg,ffprobe}
-33.7M	/opt/build/FFmpeg/ffmpeg
+33.8M	/opt/build/FFmpeg/ffmpeg
 33.7M	/opt/build/FFmpeg/ffprobe
 ```
 
 ```
 # /opt/build/FFmpeg/ffmpeg -encoders
-ffmpeg version n4.2.2 Copyright (c) 2000-2019 the FFmpeg developers
+ffmpeg version n4.2.3 Copyright (c) 2000-2020 the FFmpeg developers
   built with gcc 9.2.0 (Alpine 9.2.0)
   configuration: --enable-gpl --enable-version3 --enable-nonfree --disable-ffplay --disable-doc --enable-libass --enable-libfreetype --enable-libfdk_aac --enable-libmp3lame --enable-libopus --enable-libtheora --enable-libvorbis --enable-libvpx --enable-libx264 --enable-libx265 --pkg-config-flags=--static --extra-cflags=-static --extra-ldflags=-static --disable-debug
   libavutil      56. 31.100 / 56. 31.100
